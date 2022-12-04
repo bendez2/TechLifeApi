@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLifeApi", "TechLifeApi\TechLifeApi.csproj", "{674663ED-F8D2-440F-83FC-76A1FB8060ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{674663ED-F8D2-440F-83FC-76A1FB8060ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{674663ED-F8D2-440F-83FC-76A1FB8060ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{674663ED-F8D2-440F-83FC-76A1FB8060ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{674663ED-F8D2-440F-83FC-76A1FB8060ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {944D5E00-2DF1-4876-90D3-D10B6C8C2C50}
+	EndGlobalSection
+EndGlobal
