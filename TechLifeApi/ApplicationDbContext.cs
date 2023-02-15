@@ -10,6 +10,9 @@ namespace TechLifeApi
         public DbSet<Request> Request { get; set; }
         public DbSet<Status> Status { get; set; }
         public DbSet<TypeRequest> TypeRequest { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Post> Post { get; set; }
+        public DbSet<NameRequest> NameRequest { get; set; }
 
         public ApplicationDbContext()
         {

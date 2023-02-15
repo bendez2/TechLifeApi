@@ -30,7 +30,7 @@ namespace TechLifeApi.Controllers
         [HttpDelete("{id}", Name = "DeleteInitiator")]
         public ActionResult DeleteInitiator(int id)
         {
-            Initiator searchInitiator = _applicationDbContext.Initiator.Where(initiator => (initiator.Id == id)).FirstOrDefault();
+            Initiator ?searchInitiator = _applicationDbContext.Initiator.Where(initiator => (initiator.Id == id)).FirstOrDefault();
 
             if (searchInitiator != null && searchInitiator.Requests.Count == 0)
             {

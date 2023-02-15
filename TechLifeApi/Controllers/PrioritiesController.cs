@@ -28,7 +28,7 @@ namespace TechLifeApi.Controllers
         [HttpDelete("{id}", Name = "DeletePriority")]
         public ActionResult DeletePriority(int id)
         {
-            Priority searchPriority = _applicationDbContext.Priority.Where(priority => (priority.Id == id)).FirstOrDefault();
+            Priority ?searchPriority = _applicationDbContext.Priority.Where(priority => (priority.Id == id)).FirstOrDefault();
 
             if (searchPriority != null && searchPriority.RequestTypes.Count == 0)
             {

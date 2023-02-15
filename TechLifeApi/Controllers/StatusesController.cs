@@ -30,7 +30,7 @@ namespace TechLifeApi.Controllers
         [HttpDelete("{id}", Name = "DeleteStatus")]
         public ActionResult DeleteStatus(int id)
         {
-            Status searchStatus = _applicationDbContext.Status.Where(status => (status.Id == id)).FirstOrDefault();
+            Status ?searchStatus = _applicationDbContext.Status.Where(status => (status.Id == id)).FirstOrDefault();
 
             if (searchStatus != null && searchStatus.Requests.Count == 0)
             {

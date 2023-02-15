@@ -16,10 +16,11 @@ namespace TechLifeApi.Controllers
             _applicationDbContext = new ApplicationDbContext();
 
             _applicationDbContext.Priority.Load();
+            _applicationDbContext.NameRequest.Load();
             _applicationDbContext.TypeRequest.Load();
         }
 
-        [HttpGet(Name = "GetTypeRequests")]
+        [HttpGet(Name = "GetTypeRequestes")]
         public IEnumerable<TypeRequest> GetTypeRequests()
         {
             List<TypeRequest> typeRequests = new List<TypeRequest>();
@@ -31,7 +32,7 @@ namespace TechLifeApi.Controllers
         [HttpDelete("{id}", Name = "DeleteTypeRequestes")]
         public ActionResult DeleteTypeRequestes(int id)
         {
-            TypeRequest searchTypeRequest = _applicationDbContext.TypeRequest.Where(status => (status.Id == id)).FirstOrDefault();
+            TypeRequest ?searchTypeRequest = _applicationDbContext.TypeRequest.Where(status => (status.Id == id)).FirstOrDefault();
 
             if (searchTypeRequest != null && searchTypeRequest.Requests.Count == 0)
             {

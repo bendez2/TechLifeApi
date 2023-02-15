@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace TechLifeApi.Models
 {
@@ -8,26 +6,17 @@ namespace TechLifeApi.Models
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public int NameRequestId { get; set; }
 
-        [JsonIgnore]
+        public NameRequest NameRequest { get; set; }
+
         public int PriorityID { get; set; }
 
-        [JsonIgnore]
         public Priority? Priority { get; set; }
 
-        [NotMapped]
-        public string PriorityName { 
-            get 
-            {
-                return Priority.Name; 
-            } 
-            set 
-            { 
-            }
-        }
+        public int SlaDay { get; set; }
 
-        public string SLA { get; set; }
+        public int SlaHours { get; set; }
 
         [JsonIgnore]
         public List<Request> Requests { get; set; } = new();
